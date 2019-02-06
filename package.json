@@ -1,0 +1,26 @@
+{
+  "name": "wiktionary-utils",
+  "version": "0.0.1",
+  "description": "Just some utils to scrape data from Wiktionary for my language learning related projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sustained/wiktionary-utils.git"
+  },
+  "keywords": [
+    "wiktionary",
+    "scraper",
+    "natural",
+    "language",
+    "parser"
+  ],
+  "author": "sustained <open-source@sustained.name> (https://sustained.name/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sustained/wiktionary-utils/issues"
+  },
+  "homepage": "https://github.com/sustained/wiktionary-utils#readme"
+}
