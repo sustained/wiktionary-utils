@@ -346,7 +346,7 @@ function parseHTML(word, html) {
 function writeFile(word, conjugations) {
   fs.writeFile(
     path.join(__dirname, "output", word + ".json"),
-    JSON.stringify(conjugations.length, null, 4),
+    JSON.stringify(conjugations, null, 4),
     function() {
       console.log("Wrote the conjugations for the word " + word + " to disc.");
     }
