@@ -209,15 +209,17 @@ function scrape(word) {
 function parseCell(item) {
   item = item.trim();
 
-  if (item.indexOf(",") !== -1)
+  if (item.indexOf("(") !== -1)
+    return parseCell(
+      item
+        .replace(/[(]+/g, "")
+        .replace(/[)]+/g, "")
+        .trim()
+    );
+  else if (item.indexOf(",") !== -1)
     return item.split(",").map(i => parseCell(i.trim()));
   else if (item.indexOf(" ") !== -1)
     return item.split(" ").map(i => parseCell(i.trim()));
-  else if (item.indexOf("(") !== -1)
-    return item
-      .replace(/[(]+/g, "")
-      .replace(/[)]+/g, "")
-      .trim();
   else if (item.trim() === "–") return false;
   else return item.trim();
 }
